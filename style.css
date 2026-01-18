@@ -5,17 +5,24 @@
   font-family: Arial, sans-serif;
 }
 
-/* THEME */
 :root {
-  --bg: #ffffff;
+  --bg: #EAD8C0;
   --text: #222;
-  --nav: #f5f5f5;
+  --nav-start: #1e1509;
+  --nav-end: #d2c7ae;
+  --logo:  #dbd4ca;
+  --Mc: #33190b;
+  --aboutCafe: #4f3a1e;
 }
 
 body.dark {
-  --bg: #121212;
+  --bg: #1f0f04;
   --text: #ffffff;
-  --nav: #1f1f1f;
+  --nav-start: #2a1e15;
+  --nav-end: #967967;
+  --logo:  #F8F4E1;
+  --Mc: #EAD8C0;
+  --aboutCafe: #A79277;
 }
 
 body {
@@ -23,32 +30,62 @@ body {
   color: var(--text);
 }
 
-/* NAVBAR */
+/* Navbar */
 .navbar {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
-  background: var(--nav);
+  height: 90px;
+  padding: 0 20px;
+  background: linear-gradient(90deg, var(--nav-start), var(--nav-end));
 }
 
-/* LOGO */
+/* Teks Magnolire Cafe di Navbar */
 .logo {
-  font-size: 20px;
+  font-family: Palatino Linotype;
+  font-size: 25px;
   font-weight: bold;
+  letter-spacing: 4px;
+  color: var(--logo)
 }
 
-/* MENU DESKTOP */
+/* Menu Nabvar */
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
+/* isi menu */
 .nav-menu a {
+  position: relative;
   text-decoration: none;
-  color: var(--text);
+  color: #F8F4E1;
+  font-family: Hello;
+  font-size: 23px;
+}
+
+/* garis hover navbar */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px; /* jarak dari teks */
+  width: 0;
+  height: 2px;
+  background: #412a18;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+/* warna teks hover */
+.nav-menu a:hover {
+  color: #412a18;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
 }
 
 /* ACTIONS */
@@ -75,7 +112,7 @@ body {
 .carousel {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
 }
 
@@ -91,9 +128,9 @@ body {
 
 .carousel-slide img {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
-  filter: brightness(0.65);
+  filter: brightness(0.70);
 }
 
 /* CAPTION TENGAH */
@@ -103,20 +140,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
   color: white;
-  padding: 20px;
-}
-
-.carousel-caption h3 {
-  font-size: 24px;
-  margin-top: 260px;
+  padding: 20px 20px 60px; /* ruang untuk dot */
 }
 
 .carousel-caption p {
-  font-size: 16px;
-  margin-top: 5px;
+  font-size: 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  font-family: Vollkorn;
 }
 
 /* PANAH */
@@ -161,6 +194,483 @@ body {
   background: white;
 }
 
+/* ===== ABOUT CAFE ===== */
+.about-cafe {
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  padding: 30px 20px 10px;
+  margin-top: 40px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* JUDUL  Magnolire Cafe*/
+.about-container h1 {
+  font-size: 60px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  font-family: Perpetua Titling MT;
+  color: var(--Mc);
+}
+
+/* DESKRIPSI */
+.about-container p {
+  font-size: 18px;
+  line-height: 2.0;
+  margin-bottom: 16px;
+  color: var(--aboutCafe);
+  font-family: Volkorn;
+
+}
+
+/* ===== MENU ===== */
+.menu-section {
+  padding: 50px 10px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 50px;
+  font-family: Valentime;
+  letter-spacing: 4px;
+  color: var(--Mc);
+}
+
+
+.menu-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.menu-card {
+  background: #AF8F6F;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-bottom: 5px solid #876c57;
+}
+
+.menu-info {
+  padding: 20px;
+}
+
+.menu-info h3 {
+  font-size: 29px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-family: Vogue;
+  color: var(--logo)
+}
+
+.price {
+  display: block;
+  margin-top: 9px;
+  color: var(--logo);
+  text-align: center;
+  font-size: 20px;
+  font-family: Palatino Linotype;
+}
+
+.menu-info p {
+  font-size: 17px;
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Vogue;
+  color: var(--logo);
+}
+
+/* ===== POPUP ===== */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 20px;
+  max-width: 420px;
+  width: 90%;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  animation: pop 0.4s ease;
+}
+
+/* ===== MENU DESCRIPTION ===== */
+.menu-description {
+  padding: 90px 20px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.menu-desc-container {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+/* JUDUL */
+.menu-desc-container h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  font-family: Chocolate;
+}
+
+/* DESKRIPSI */
+.menu-desc-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.popup-content img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.popup-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-price {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.contact-section {
+  padding: 80px 20px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.contact-desc {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+/* FORM */
+.contact-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* INPUT */
+.form-grid input,
+.form-grid textarea {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.15);
+  font-size: 14px;
+  outline: none;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* TEXTAREA FULL WIDTH */
+.form-grid textarea {
+  grid-column: span 2;
+  resize: none;
+  height: 120px;
+}
+
+/* BUTTON */
+.submit-btn {
+  margin-top: 30px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.85;
+}
+
+/* DARK MODE SUPPORT */
+body.dark .submit-btn {
+  background: #fff;
+  color: #121212;
+}
+
+body.dark .form-grid input,
+body.dark .form-grid textarea {
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  background: #6b4f4f;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-row {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.order-row select,
+.order-row input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: var(--bg); /* ikut theme */
+  color: var(--text); 
+}
+
+body.dark .order-row select,
+body.dark .order-row input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.order-row input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+body.dark .order-row input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+.review-section {
+  padding: 60px 20px;
+  background: #f8f8f8;
+}
+
+body.dark .review-section {
+  background: #121212;
+}
+
+.review-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.review-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.review-desc {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+body.dark .review-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  text-align: left;
+}
+
+.review-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+body.dark .review-card {
+  background: #1f1f1f;
+  border: 1px solid rgba(255, 255, 255, 0.18); /* border tetap terlihat */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.review-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.review-text p {
+  margin: 0;
+  color: #555;
+}
+
+body.dark .review-text h3,
+body.dark .review-text p {
+  color: #fff;
+}
+
+.footer {
+  background: var(--nav);
+  color: var(--text);
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-desc {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+
+
+.social-item {
+  text-align: center;
+  flex: 1;
+}
+
+.social-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.social-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-bottom {
+  width: 100%;
+ /* warna footer bawah */
+  text-align: center;
+  margin-top: 0; /* hilangkan jarak atas */
+  padding: 15px 0; /* tinggi footer */
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 
 
 
@@ -171,7 +681,14 @@ body {
     .burger {
     display: block;
   }
+   .social-grid {
+    gap: 20px;
+  }
 
+  .social-img {
+    width: 60px;
+    height: 60px;
+  }
   .nav-menu {
     position: absolute;
     top: 100%; /* nempel langsung ke navbar */
@@ -212,9 +729,6 @@ body {
     .carousel {
     margin-top: var(--menu-height, 0px);
     transition: margin-top 0.6s ease;
-  }
-
-    .carousel {
     height: 45vh;
   }
 
@@ -235,5 +749,86 @@ body {
   .carousel-caption p {
     font-size: 14px;
   }
+
+    .about-cafe {
+    padding: 50px 16px;
+  }
+
+  .about-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .about-container p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+    .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-title {
+    font-size: 32px;
+  }
+
+    .menu-description {
+    padding: 60px 16px;
+  }
+
+  .menu-desc-container h2 {
+    font-size: 26px;
+  }
+
+  .menu-desc-container p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+    .contact-title {
+    font-size: 28px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid textarea {
+    grid-column: span 1;
+  }
+
+    .review-grid {
+    grid-template-columns: 1fr; /* 1 kolom */
+    gap: 20px;
+  }
+
+  .review-card {
+    padding: 15px;
+  }
+
+  .review-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .review-title {
+    font-size: 28px;
+  }
+
+  .review-desc {
+    font-size: 15px;
+  }
+
+   .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* buat item terakhir berada tengah */
+  .social-item:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: fit-content;
+  }
+
 }
 
