@@ -119,6 +119,30 @@ const menuData = [
     document.getElementById(id).style.display = "none";
   }
 
+  const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popupImg");
+const popupTitle = document.getElementById("popupTitle");
+const popupDesc = document.getElementById("popupDesc");
+const popupPrice = document.getElementById("popupPrice");
+
+function openPopup(card) {
+  const img = card.dataset.img;
+  const title = card.querySelector("h3").textContent;
+  const price = card.querySelector(".price").textContent;
+  const desc = card.querySelector("p").textContent;
+
+  popupImg.src = img;
+  popupTitle.textContent = title;
+  popupDesc.textContent = desc;
+  popupPrice.textContent = price;
+
+  popup.style.display = "flex";
+}
+
+function closePopup() {
+  popup.style.display = "none";
+}
+
 
 
 

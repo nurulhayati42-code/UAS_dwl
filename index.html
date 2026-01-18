@@ -14,7 +14,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#tentang">Profile</a></li>
         <li><a href="#">Menu</a></li>
-        <li><a href="#">Reservation</a></li>
+        <li><a href="#reservasi">Reservation</a></li>
         <li><a href="#review">Reviews</a></li>
         <li><a href="#kontak">Contact</a></li>
       </ul>
@@ -71,8 +71,7 @@
       Magnolire Café adalah ruang tenang yang diciptakan untuk berhenti sejenak dari hiruk pikuk, tempat menikmati momen sederhana dalam suasana hangat
       dan nyaman. Di Magnolire Café, setiap sajian dibuat untuk menemani waktu santai Anda.
       Pastry hangat, minuman lembut, dan suasana yang menenangkan. Kami percaya bahwa kebahagiaan kecil bisa datang dari secangkir kopi yang diseduh dengan penuh perhatian, serta waktu berkualitas bersama orang-orang tersayang.
-Nikmati pilihan menu yang dibuat dari bahan terbaik, dipadu dengan suasana yang cozy, cocok untuk bekerja, membaca, atau sekadar melepas lelah.
-Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
+Nikmati pilihan menu yang dibuat dari bahan terbaik, dipadu dengan suasana yang cozy, cocok untuk bekerja, membaca, atau sekadar melepas lelah.</p>
   </div>
   </div>
 </section>
@@ -83,7 +82,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
 
   <div class="menu-grid">
     <!-- 1 -->
-    <div class="menu-card" onclick="openPopup(0)">
+    <div class="menu-card" onclick="openPopup(this)" data-img="https://i.pinimg.com/1200x/e3/09/0e/e3090e756e66031d6e06174280087124.jpg">
      
       <img src="https://i.pinimg.com/1200x/e3/09/0e/e3090e756e66031d6e06174280087124.jpg">
       <div class="menu-info">
@@ -94,7 +93,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
     </div>
 
     <!-- 2 -->
-    <div class="menu-card" onclick="openPopup(1)">
+    <div class="menu-card" onclick="openPopup(this)" data-img="https://i.pinimg.com/1200x/cf/9b/af/cf9bafa8f904bb4c2aacf06cebf46331.jpg">
       <img src="https://i.pinimg.com/1200x/cf/9b/af/cf9bafa8f904bb4c2aacf06cebf46331.jpg">
       <div class="menu-info">
         <h3>Chocolate Almond Croissant</h3>
@@ -104,7 +103,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
     </div>
 
     <!-- 3 -->
-    <div class="menu-card" onclick="openPopup(2)">
+    <div class="menu-card" onclick="openPopup(this)" data-img="https://i.pinimg.com/736x/5e/01/db/5e01db1d5951ad086bddbb40625945a6.jpg">
       <img src="https://i.pinimg.com/736x/5e/01/db/5e01db1d5951ad086bddbb40625945a6.jpg">
       <div class="menu-info">
         <h3>Choux Pastry</h3>
@@ -114,7 +113,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
     </div>
 
     <!-- 4 -->
-    <div class="menu-card" onclick="openPopup(3)">
+    <div class="menu-card" onclick="openPopup(this)" data-img="https://i.pinimg.com/736x/24/0f/dc/240fdc3ae3a8d703385577c059c6b8dc.jpg">
       <img src="https://i.pinimg.com/736x/24/0f/dc/240fdc3ae3a8d703385577c059c6b8dc.jpg">
       <div class="menu-info">
         <h3>Berry Danish Delight</h3>
@@ -124,7 +123,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
     </div>
 
     <!-- 5 -->
-    <div class="menu-card" onclick="openPopup(4)">
+    <div class="menu-card" onclick="openPopup(this)" data-img="https://i.pinimg.com/1200x/09/5e/34/095e34dcebdcecaada45683fd4fab9d1.jpg">
       <img src="https://i.pinimg.com/1200x/09/5e/34/095e34dcebdcecaada45683fd4fab9d1.jpg">
       <div class="menu-info">
         <h3>Classic Pain au Chocolat</h3>
@@ -134,7 +133,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
     </div>
 
     <!-- 6 -->
-    <div class="menu-card" onclick="openPopup(5)">
+    <div class="menu-card" onclick="openPopup(this)" data-img="https://i.pinimg.com/736x/18/ac/fb/18acfba17603ab2530c38df43e4cd181.jpg">
       <img src="https://i.pinimg.com/736x/18/ac/fb/18acfba17603ab2530c38df43e4cd181.jpg">
       <div class="menu-info">
         <h3>Vanilla Cream Tart</h3>
@@ -166,7 +165,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
   </div>
 </section>
 
-<section class="contact-section">
+<section class="contact-section"> <div class id="reservasi">
   <div class="contact-container">
     <h2 class="contact-title">Reserve a Moment With Us</h2>
     <p class="contact-desc">
@@ -212,6 +211,7 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
       <button type="submit" class="submit-btn">Send Request</button>
     </form>
   </div>
+  </div>
 </section>
 
 <!-- Popup Success -->
@@ -243,9 +243,9 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
     <div class="review-grid">
       <!-- Baris 1, Kolom 1 -->
       <div class="review-card">
-        <img src="https://picsum.photos/100" alt="Foto pelanggan" class="review-img" />
+        <img src="https://i.pinimg.com/1200x/25/24/95/252495c4b9e25c3ae71ba63e68c5bdc7.jpg" alt="Foto pelanggan" class="review-img" />
         <div class="review-text">
-          <h3>Nama Pelanggan 1</h3>
+          <h3>Jung Yoon-oh</h3>
           <p>
             "Suasananya sangat nyaman, cocok buat kerja santai. Menu pastry-nya enak banget!"
           </p>
@@ -254,9 +254,9 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
 
       <!-- Baris 1, Kolom 2 -->
       <div class="review-card">
-        <img src="https://picsum.photos/101" alt="Foto pelanggan" class="review-img" />
+        <img src="https://i.pinimg.com/736x/ad/d4/d2/add4d25c1bc1f41cbc3fac1644cf6541.jpg" alt="Foto pelanggan" class="review-img" />
         <div class="review-text">
-          <h3>Nama Pelanggan 2</h3>
+          <h3>Lee Je-no</h3>
           <p>
             "Tempatnya estetik, pelayanan ramah. Kopinya pas dan tidak terlalu pahit."
           </p>
@@ -265,9 +265,9 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
 
       <!-- Baris 2, Kolom 1 -->
       <div class="review-card">
-        <img src="https://picsum.photos/102" alt="Foto pelanggan" class="review-img" />
+        <img src="https://i.pinimg.com/736x/70/92/1b/70921b0b22fb803ad37ae4f6fd0713e0.jpg" alt="Foto pelanggan" class="review-img" />
         <div class="review-text">
-          <h3>Nama Pelanggan 3</h3>
+          <h3>Jackson Wang</h3>
           <p>
             "Pastry-nya fresh, dan suasana cafe bikin betah lama-lama."
           </p>
@@ -276,9 +276,9 @@ Mari datang dan temukan sudut favoritmu di Magnolire Café.</p>
 
       <!-- Baris 2, Kolom 2 -->
       <div class="review-card">
-        <img src="https://picsum.photos/103" alt="Foto pelanggan" class="review-img" />
+        <img src="https://i.pinimg.com/1200x/72/d0/2a/72d02a849e20fff5ff74aa92c0ceffed.jpg" alt="Foto pelanggan" class="review-img" />
         <div class="review-text">
-          <h3>Nama Pelanggan 4</h3>
+          <h3>Park Hyung Sik</h3>
           <p>
             "Sangat recommended untuk tempat ngobrol santai dan kerja."
           </p>
