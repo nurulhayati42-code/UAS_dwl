@@ -222,7 +222,18 @@ body {
     height: 45vh;
   }
 
-  .carousel-caption h1 {
-    font-size: 32px;
+    .carousel-caption {
+    justify-content: flex-end;
+    padding-bottom: 50px; /* JARAK DARI DOT */
+  }
+
+  .carousel-caption h3 {
+    font-size: 17px;
+    margin-top: 6px;
+  }
+
+  .carousel-caption p {
+    font-size: 14px;
   }
 }
+
