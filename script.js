@@ -91,33 +91,31 @@ const menuData = [
   }
 ];
 
-  const form = document.querySelector(".contact-form");
-  const successPopup = document.getElementById("successPopup");
-  const errorPopup = document.getElementById("errorPopup");
+const form = document.querySelector(".contact-form");
+const successPopup = document.getElementById("successPopup");
+const errorPopup = document.getElementById("errorPopup");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    const inputs = form.querySelectorAll("input, textarea, select");
-    let isFilled = true;
+  const inputs = form.querySelectorAll("input, textarea, select");
+  let isFilled = true;
 
-    inputs.forEach(input => {
-      if (input.value.trim() === "") {
-        isFilled = false;
-      }
-    });
-
-    if (isFilled) {
-      successPopup.style.display = "flex";
-      form.reset();
-    } else {
-      errorPopup.style.display = "flex";
+  inputs.forEach(input => {
+    if (input.value.trim() === "") {
+      isFilled = false;
     }
   });
 
-  function closePopup(id) {
-    document.getElementById(id).style.display = "none";
+  if (isFilled) {
+    successPopup.style.display = "flex";
+    form.reset();
+  } else {
+    errorPopup.style.display = "flex";
   }
+});
+
+
 
   const popup = document.getElementById("popup");
 const popupImg = document.getElementById("popupImg");
@@ -139,9 +137,13 @@ function openPopup(card) {
   popup.style.display = "flex";
 }
 
-function closePopup() {
-  popup.style.display = "none";
+function closePopup(id = "popup") {
+  const popup = document.getElementById(id);
+  if (popup) {
+    popup.style.display = "none";
+  }
 }
+
 
 
 
